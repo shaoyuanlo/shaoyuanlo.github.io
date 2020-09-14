@@ -1,5 +1,4 @@
-# Shao-Yuan's Homepage
-shaoyuanlo.github.io
+# Shao-Yuan Lo's Homepage
+[shaoyuanlo.github.io](https://shaoyuanlo.github.io/)
 
-## Resources
-- [Template](https://github.com/jonbarron/website)
+Template: [Jon Barron](https://github.com/jonbarron/website)
