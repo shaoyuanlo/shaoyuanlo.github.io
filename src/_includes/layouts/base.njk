@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if section == 'home' %}{{ site.profile.name }}{% elif section == 'lab' %}Trai Lab @ National Taiwan University{% else %}{{ title or profile.name }} | {{ site.profile.name }}{% endif %}</title>
+  <link rel="canonical" href="{{ siteOrigin }}{{ page.url | url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title or profile.name }} · {{ site.profile.name }}">
+  <meta property="og:url" content="{{ siteOrigin }}{{ page.url | url }}">
+  <meta property="og:image" content="{{ siteOrigin }}{{ site.profile.image | url }}">
+  <link rel="icon" type="image/png" sizes="620x620" href="{{ '/files/trai_logo_13.png' | url }}">
+  <link rel="apple-touch-icon" sizes="620x620" href="{{ '/files/trai_logo_13.png' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+</head>
+<body{% if section %} class="page-{{ section }}"{% endif %}>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="{{ '/' | url }}" aria-label="{{ site.profile.name }} — Home">{{ site.profile.name }}</a>
+      <nav aria-label="Main navigation">
+        {% for item in site.navigation %}
+        <a href="{{ item.url | url }}"{% if section == item.key %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="site-main" tabindex="-1">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 {{ site.profile.name }} {{ site.profile.nameChinese }}</p>
+    </div>
+  </footer>
+</body>
+</html>

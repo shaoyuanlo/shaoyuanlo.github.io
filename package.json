@@ -1,0 +1,19 @@
+{
+  "name": "shaoyuanlo-academic-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "node scripts/clean.mjs && eleventy",
+    "build:preview": "node scripts/build-preview.mjs",
+    "check": "node scripts/check-site.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7",
+    "gray-matter": "npm:@11ty/gray-matter@1.0.0"
+  }
+}

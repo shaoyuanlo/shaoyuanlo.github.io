@@ -1,28 +1,5 @@
-## logs
-_site
-Gemfile.lock
-
-## misc
+node_modules/
+_site/
+_preview/
 .DS_Store
-*.swp
-*.vscode/
-*.idea/
-*.ropeproject/
-*__pycache__/
-*.ipynb_checkpoints/
-
-## latex
-*.aux
-*.out
-*.toc
-*.log
-*.bbl
-*.blg
-*.fdb_latexmk
-*.fls
-*.nav
-*.snm
-*.xdv
-*.dvi
-*.gz
-*.ps
+artifacts/

@@ -1,0 +1,10 @@
+<section class="lab-gallery" data-gallery aria-label="Lab photos and videos">
+  <div class="gallery-track" id="lab-photo-track" tabindex="0" aria-label="Photos and videos: use arrow keys or swipe to browse">
+    {% for photo in galleryPhotos %}
+    {% include "components/media-item.njk" %}
+    {% endfor %}
+  </div>
+  <input class="gallery-scrollbar" data-gallery-scrollbar type="range" min="0" max="100" step="1" value="0" aria-label="Photo scroll position" hidden>
+  <div class="gallery-actions"><a class="button" href="{{ '/photos/' | url }}">View All Photos</a></div>
+  {% include "components/media-viewer.njk" %}
+</section>

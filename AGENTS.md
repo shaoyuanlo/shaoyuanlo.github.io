@@ -1,0 +1,97 @@
+# 學術個人網站：Codex 共用維護規則
+
+適用於整個儲存庫及所有 Codex 網頁版聊天／GitHub 雲端任務。當次使用者指示優先；以最新程式碼、README 與 Git 紀錄核對現況，不以舊聊天或歷史截圖覆蓋手動修改。
+
+本檔記錄工作與設計原則；[README.md](README.md) 提供編輯、設定與發布指南；[src/assets/style.css](src/assets/style.css) 是設計值的唯一設定來源。避免在多份文件重複固定數值、行號、筆數或暫時測試內容。
+
+## 協作方式與變更範圍
+
+- 使用者使用 Codex 網頁版，透過 GitHub 執行雲端任務；正式網站儲存庫為 `shaoyuanlo/shaoyuanlo.github.io`，日常維護分支為 `master`。
+- Threads 是自由聊天視窗，由使用者自行決定何時開新視窗；不預先指定功能、分類或命名，不自行建立 Threads。不要求額外介面 Project、電腦 App 或使用者本機 clone。
+- 新聊天／雲端環境不假設共用前次的記憶、未提交檔案或伺服器。開始先讀本檔及相關 README，再查看工作目錄、分支與遠端最新提交；乾淨時用 fast-forward 同步。
+- 使用者常在 GitHub 手動修改 Markdown 與 CSS。保留其內容；遇到未提交變更或分歧，先辨識來源，不強制重設、清除、覆寫或 force push。
+- 說明、檢查與規劃要求保持唯讀；修改要求則完成相關實作、驗證及既有 `master` 提交／推送流程，不為已授權的例行工作反覆要求確認。
+- 當次只處理相關內容；不擅自提交其他工作留下的變更，不順便更換版面、文案、圖片或功能。並行可能衝突時依序處理，必要時隔離後整合，不建立每個 Thread 的永久分支。
+- 與使用者以繁體中文溝通；README 與本檔的說明使用中文，網站內容以英文為主。程式碼註解使用簡短清楚的英文。
+- [工作互動中的觀察](OBSERVATIONS.md) 僅在使用者明確指示時，依實際情況編輯；平時協作不主動更新，也不隨其他文件維護順帶修改。
+
+## 設計與技術原則
+
+- 目標是簡潔專業、手機閱讀良好，並方便使用者長期自行手動維護。
+- **變數與選項盡量精簡、統一管理；優先共用及繼承，不為每個數字、頁面或元件新增選項。** 新樣式先用既有變數；確有用途才增加例外，同步清理失效或未使用的設定。
+- 維持 Eleventy、Markdown、Nunjucks 與原生 CSS。一般內容編輯不導入 CMS、前端框架或額外依賴；原生 HTML 能完成的互動優先使用原生功能。Lab 相片集依使用者要求，在 Lab 與 Photos 共用原生 JavaScript 的媒體 dialog，僅 Lab 提供滾輪與拖曳瀏覽，不擴及其他頁面或改寫 News。
+- 內容在 Markdown、結構在共用版型、外觀在 CSS；建置時必要的顯示轉換集中在既有設定，不把資料與樣式散落到多個檔案。
+- 維持既有精簡色盤：白色頁面背景、黑色一般文字、黑底白字導覽、深金色強調，淺金色共用於提示框／程式碼／邊框，論文標記沿用既有強調色。不重新區分主要／次要灰字，不新增瀏覽器 `theme-color`。
+- 全站共用 Inter／Noto Sans TC 與系統備援，字級引用既有五個選項，字重只用 400／600；Markdown 粗體沿用 600。字距、單字間距用 `normal`，不新增相關選項。
+- 行高、margin、padding、gap 共用既有級距，一般段落下外距使用 space-sm；功能尺寸可依用途直接設定。維持單一螢幕寬度 breakpoint，手機在共用變數區集中覆寫字級、行高與間距，避免元件各自重複設定數字。
+- CSS 依英文分類註解集中管理；共用圓角緊接間距設定。首頁、按鈕及共用日期清單各自集中，日期清單與 News 控制區塊和後續設定保留三個空白行。若使用者指定新的位置，依當次要求調整，不為維持歷史行號製造重複規則。
+- 內容、導覽與頁尾共用容器寬度及左右內距；各分頁正文使用完整容器寬度，不另加窄版限制。
+- 首頁 `.hero` 與 `.page-heading` 共用內外距；首頁姓名沿用共用 H1 間距，照片頂端維持與姓名標題頂端對齊，呈現原圖色彩。手機維持兩欄：左欄為姓名與職稱資訊，右側照片跨越姓名、職稱兩列，聯絡連結在下方占滿整列。中文姓名固定另起一行、左外距為 0，與英文姓名靠左對齊。
+- 論文標題沿用 H3 的字級、字重、行高與上外距，只獨立覆寫下外距。標題、職稱資訊、論文相關資訊與導覽用 compact 行高，正文用 body 行高。
+- `.button` 沿用共用文字式外觀；文字連結平時無底線、滑入時顯示底線，金色連結滑入時加深，導覽列維持白字並於選取或滑入時加粗，文字式按鈕用 accent，滑入及 News 選取時用加深的 accent，鍵盤焦點保留共用外框。不為個別連結複製設計。外部 HTTP／HTTPS 連結及 files/talks/ 下的投影片 PDF，在 Eleventy newTabLinks transform 統一以新分頁開啟並加入 noopener／noreferrer，保留既有 rel；外部連結以建置 origin 判斷，Slides 依投影片檔案路徑判斷；其餘站內、錨點及 mailto 不套用，不新增瀏覽器連結處理腳本。
+- 標題、正文清單及頁尾不自帶內容分隔線；以 Markdown `---` 控制區塊留白，目前以透明線框隱藏線條，保留共用上下外距及既有留白結構。保留提示框、程式碼、表格等既有功能樣式。
+- 保留語意標題、每頁單一主標題、鍵盤操作、可見焦點、跳至內容、sticky 導覽、手機導覽水平捲動、內文換行、列印與本地字型等功能。
+
+## 來源與內容規範
+
+| 用途 | 來源 |
+| --- | --- |
+| Home、共用個人資料、導覽、News、Honors & Awards、Media Coverage | `src/home.md` |
+| Lab、Photos、Publications、Activities、Teaching、Blog | `src/lab.md`、`src/photos.md`、`src/publications.md`、`src/activities.md`、`src/teaching.md`、`src/blog.md` |
+| 全站結構、首頁、一般分頁版型 | `src/_includes/layouts/` 中的 `base.njk`、`home.njk`、`page.njk` |
+| 設計設定、字型 | `src/assets/` |
+| CV、照片、校徽、論文、演講資源 | `files/`（論文及演講資源分置 `files/papers/`、`files/talks/`） |
+| 共用資料讀取與顯示轉換 | `eleventy.config.js` |
+| 建置、檢查與發布 | `scripts/`、`.github/workflows/` |
+
+### 一般分頁與首頁
+
+- 導覽順序為 Home、Trai Lab、Publications、Activities、Teaching、Blog、Legacy Site；Legacy Site 連到原始檔案保留在 `legacy/` 的舊網站。Home 來源為 `home.md`、網址為 `/`。導覽列桌機顯示姓名與選單，不在姓名後額外加句點；手機隱藏導覽列姓名，選單維持單列，放不下時左右捲動，不改成多列；保留可見鍵盤焦點及各項目可達性。導覽列容器不設最低高度、上下內距為 0，由選單項目與原生捲動區自然決定高度。保留 `publications` 在檔名、section、導覽 key、CSS 與網址的一致性；舊 `/publication/` 僅保留於失效路徑的檢查與說明。
+- 網頁文字使用英文半形括號 `()`，左括號前保留一個空格，例如 `NTUH (臺大醫院)`；不修改 Markdown 連結語法或網址內的括號。
+- Front matter 先放運作欄位（layout、section、permalink 等），再放 title、intro 與內容資料。正文從 H2 開始；不重新加入 eyebrow、description 或首頁 tagline 欄位及其相關顯示設定。
+- Home 與 Lab 的頁首內容統一在各自的 `profile:` 維護；首頁 `website:` 只保留導覽等全站設定，`site.profile` 讀取首頁 profile 作為全站姓名、頁尾及 metadata 的唯一來源，不重新建立 `site.json`；頁尾中文姓名不加括號。職稱使用 roles 清單，每組有 role 與一到多個 affiliations，各自成行；分頁頁首 intro 與首頁職稱／所屬單位共用 lg 字級。
+- Email、CV 與社群連結統一由 social 清單維護；其他聯絡文字沿用第一個 mailto 連結的信箱，不另外複製地址。內部檔案路徑支援根網址、子路徑及預覽。
+- Lab 頁首與首頁共用 profile 元件及 `.hero` 設定，兩頁的名稱、簡介、圖片等皆在各自的 `profile` 編輯，不保留根層的 Lab 名稱／簡介作為另一套頁首欄位。Lab 頁首桌機雙欄，Logo 位於文字右側，手機單欄且 Logo 位於標題與職稱資訊之間，Lab 中英文名稱維持同行，首頁與 Lab 職稱使用一般文字色。相片集放在介紹區塊下方；桌機與手機共用排列及下方常駐捲動條，移除左右按鈕；桌機一次滾輪手勢平滑移動一張，手機保留原生滑動，照片滑動與捲動條拖曳須同步；滑入相片集區域時顯示可拖曳手掌，拖曳時顯示抓握手掌；桌機游標位於整個相片集時，滾輪不得帶動全頁（包括兩端）；縮圖等大裁切，放大顯示完整原圖。照片、影片、alt 與 caption 集中在 `src/photos.md` 的 albums 清單；每組 title 顯示共用 H2，兩版皆固定兩欄並以 16:9 裁切，Lab 精選維持 4:3，row／column 間隔分別使用共用 space-md／space-lg；Lab 的 photos 只列精選 src，透過 photoLibrary／selectPhotos 共用內容、不重複維護說明，檔案在 `files/lab_photos/`；維持滑鼠、鍵盤與手機操作，以及停用 JavaScript 時的原生捲動與圖片連結。保留使用者原檔；HEIC 提供 JPEG 網頁版本、MOV 提供 H.264／AAC MP4 與封面，影片項目使用 type: video 及 poster。影片在原生 dialog 中以原生控制列播放、不自動播放，關閉時停止並釋放載入；圖片與影片共用瀏覽操作。Photos 使用一般 page 版型及 /photos/，不放導覽列，入口為 Lab 精選集下方靠左的共用 View All Photos 按鈕，與捲動條操作區以 space-xs 間隔；完整相片集、Lab 精選與放大視窗的 caption 共用 compact 行高，單行置中；多行時由既有共用相片腳本量測首行，讓首行相對圖片置中、後續行對齊首行左緣，字型載入、縮放及開啟視窗時更新，不新增套件；Photos 共用媒體檢視器但不攔截整頁捲動。Demo 圖片及其來源紀錄已依使用者要求移除，不重新加入。
+- Blog 直接使用一般 page 版型與 Markdown；不新增自動文章集合、列表、日期排序、草稿旗標、獨立文章版型或 Blog 專用外觀。
+
+### News 與共用日期清單
+
+- 使用 Markdown 清單，News 格式為 `- **Oct 2025** — Message text.`；Media Coverage 使用完整日期，如 `- **Mar 03, 2026** — Message text.`。日期直接寫在內容，不新增日期轉換設定。
+- 共用版型用 datedLists 轉換分出日期與內文，CSS 維持兩欄及長文字換行位置，日期欄使用 max-content；News 與 Media Coverage 依各清單內容決定，Invited Talks 透過 Grid／subgrid 讓所有題目群組共用整個區塊中最寬的日期欄，不另設固定寬度，與右側內容沿用相同間距並維持各列對齊，日期使用黑色並在欄內兩端對齊；手機完整日期分成月日、年份兩行，月日兩端對齊且不顯示逗號，年份靠右，與內容的欄間距不變；保留內文的連結、粗體及斜體。
+- News、Media Coverage 與 Invited Talks 共用日期清單元件與樣式，不另建分頁樣式；一般 bullet 清單維持預設樣式。Invited Talks 使用粗體題目 bullet 分組，同題合併；其下使用共用完整日期清單，保留粗體單位、一般字體場合、主持人及每場 Slides，場次不呈現 bullet；依最近場次排序，組內由新到舊，沿用共用清單及日期兩欄／手機兩行設定；演講列表相對題目文字再以共用 space-xl 內縮，日期在 Markdown 不加粗體，內容格式為粗體單位、一般字體場合、Host: 姓名及中括號內 Slides，主持人姓名不加連結；同一題目內的題目至列表及場次間距使用共用 space-xs，跨題目 bullet 間距使用 space-sm，避免外距重複累加，移除姓名前的 Prof.／Dr.。首頁 Honors & Awards 放在 News 後，接著 Media Coverage；Activities 沿用預設 page 版型。
+- 原生單選控制項與 CSS 提供標題旁的 Recent／All 切換，沿用共用 `.button`；All 合併所有消息，在 Recent 的自然高度內垂直捲動，切換不改變整頁捲動位置；不加入 JavaScript 或額外依賴。
+- Recent 顯示數量由 `news-archive` 前方的消息位置決定，舊消息置於 archive 內；`newsTabs` 在建置時產生兩種檢視，內容只維護一份。保留使用者手動調整，不擅自恢復某個固定筆數或建立數量選項。
+
+### Publications 與資料來源
+
+- 依年份由新到舊；同年份論文間只留 Markdown 空行，年份區塊最後一篇下方才加 `---`，最後一個年份亦同。
+- 編號由 `publicationIndexes` 在建置時產生：年份區塊跨年份連續倒序，Preprints 獨立倒序使用 pN 至 p1；Dissertations 不編號，不在 Markdown 手動加序號。
+- 使用 H3 論文標題；會議／期刊名稱斜體、括號內簡稱粗體、年份放在斜體之外。
+- 標記使用 `· **Oral**`、`· **Spotlight**` 等既有轉換，只有粗體文字套強調色，前方的 `·` 保持一般文字色。
+- 資源以 `Paper / arXiv` 為前兩項，再接其他資源；Paper 指向正式出版 PDF，找不到時用該篇 arXiv PDF；arXiv 保留原有論文頁面網址。無網址用純文字佔位，不建立空連結；不加入 BibTeX 欄位、連結或檔案。
+- Publications 末尾的 Dissertations 使用共用標題與內文規則，保留學位論文資料與 Thesis 連結，不加入 BibTeX 或獨立卡片外觀。
+- 作者順序、標題、年份、會議、獎項與網址需有來源，不補造學生、職稱、課程或研究成果。使用者要求測試內容時明確標示，不將範例寫成真實經歷。
+- 匯入時核對內容與筆數，避免重複或漏項；來源有疑義時保留依據，不自行猜測更正。新增或更換 PDF 應核對標題與內容，不以投影片代替。
+- `docs/publication-*.json` 與 `docs/preview/` 是查核／預覽歷史，不代表目前內容已驗證。保留歷史圖片，不在 README 重新嵌入或連結圖片作為目前預覽。
+- `files/` 專屬網站內容檔案；CSS、字型、建置腳本與查核紀錄維持各自目錄，不混放於 `files/`。
+- 已發布檔案或識別改名時，檢查版型、導覽、front matter、CSS、站內連結、腳本與文件，移除失效依賴。無關修改保留現有照片與台大校徽。
+
+## 建置、預覽與正式發布
+
+- `master` 是來源，`site-preview` 是 Actions 產物；不手動編輯產物分支、不從它開發、不合併回 master。兩分支提交數不同不代表需同步合併。
+- `node_modules/`、`_site/`、`_preview/`、`artifacts/` 是依賴或產物，不編輯、不提交。
+- 代理預覽由 Actions 手動發布，固定版導覽指向固定路徑。
+- 快速版使用 `revisions/<來源提交前綴>/`，頁面、導覽與圖片指向同一版本；只保留當次版本。預覽內嵌 CSS 與 Lab 相片集腳本、字型共用固定路徑；一般建置仍使用外部 CSS。
+- 沿用發布後官方 purge、限流重試及版本核對流程；不要將清除快取成功、首頁 200 或檔案已發布等同於整體檢查成功。
+- 從 preview.json 取得實際 stableUrl、url、sourceCommit；核對同版本 preview-health.json 的個別結果。固定首頁 currentVersion 為 true 才能宣稱固定入口已更新；整體通過需對應 passed 為 true。
+- 代理可能限流或快取舊內容。準確說明已驗證與未確認的範圍，提供已驗證入口；不能保證舊網址、第三方快取或歷史立即消失。
+- 推送 `master` 會透過 GitHub Actions 部署正式網站 `https://shaoyuanlo.github.io/`，以實際部署結果為準。
+
+## 驗證、交付與文件維護
+
+- 純 README／規則修改：核對來源、相對連結、文件一致性與 `git diff --check`；不為此新增網站測試或等待無關部署。
+- 修改網站內容、CSS、版型或建置：執行 `npm run build`、`npm run check`；涉及預覽或路徑時另執行 `npm run build:preview`、`node scripts/check-site.mjs _preview`。
+- 按變更範圍檢查桌機、手機、breakpoint 邊界、橫向溢出、導覽、短頁面頁尾及相關互動。News 包含鍵盤、Recent／All 狀態、兩種模式等高、All 區域捲動與不啟用 JavaScript 的操作；避免反覆執行無關測試。
+- 外部連結未實際查核不宣稱已全部通過；本地連結檢查不代表外部服務可用，HTTP 成功不等於 PDF 免登入。
+- 每次修改回覆說明結果，**顯示代表性程式碼／文件 diff，提供完整提交或比較連結**，附實際檢查結果及尚未確認事項。網站部署已驗證時提供固定與當次快速預覽；未驗證不猜網址、不宣稱完成。
+- 新的長期原則更新在本檔；使用方式與目前設定說明更新在 README，實際數值仍只在 CSS 設定。使用者手動修改後，以最新程式碼重新核對文件，避免只累積追加說明或保留過時範例。

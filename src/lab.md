@@ -1,0 +1,76 @@
+---
+layout: layouts/page.njk
+section: lab
+permalink: /lab/index.html
+profile:
+  name: Trai Lab
+  nameChinese: 踹實驗室
+  roles:
+    - role: Trustworthy AI Lab 信韌智慧實驗室
+      affiliations:
+        - National Taiwan University 國立臺灣大學
+  image: /files/trai_logo_11.png
+  imageAlt: Trai Lab logo
+  social:
+  - label: Dcard
+    url: https://www.dcard.tw/f/graduate_school/p/260285531
+  - label: Threads
+    url: https://www.threads.com/share/HHqu-o4Ky/
+photos:
+  - /files/lab_photos/image_2F33A832.jpeg
+  - /files/lab_photos/IMG_6450.jpg
+  - /files/lab_photos/PXL_20260710_103414851.jpg
+  - /files/lab_photos/PXL_20260716_122006292.jpg
+  - /files/lab_photos/image_97AC1C93-C944-4D05-9540-DD65427855B0_1784498830.jpg
+  - /files/lab_photos/Trai_lab3.mp4
+---
+
+## People
+
+### Principal Investigator
+
+- Shao-Yuan Lo 羅紹元
+
+### MS Students
+
+- Yi-Hsin Hung 洪亦歆
+- Po-Hsi Lin 林伯禧
+- Tzu- Huan Lin 林子歡
+- Shuan-Shaw Chen 陳璿修
+- Te-Kai Yen 嚴得愷
+- Guan-Yi Lin 林冠儀
+- Jui-Ming Yao 姚睿銘
+
+### Undergrad Students
+
+- Siangyu Yang 楊翔宇
+- Yen-Wei Chang 張彥崴
+- Jaron Yeh 葉哲綸
+- Meng-Heng Tsai 蔡孟衡
+- Chih-Fan Wang 王之凡
+- Sheng-Yuan Chang 張聲元
+- Peng-Chan Chiang 蔣朋展
+- Pin-Yu Wu 吳品諭
+- Yu-Syuan Lee 李育烜
+- Tzu-Chin Chiu 邱子芹
+- Chi-Lei Tsai 蔡琦磊
+
+### Alumni
+
+- Po-Feng Liu 劉柏鋒 (BS'26)
+- S-Wei Chen 陳思瑋 (BS'26)
+- Yi-Chen Jan 詹挹辰 (BS'26)
+- Julian Mosig von Aehrenfeld (Visiting Student, Jun 2026 - Aug 2026; Undergrad at Universität Leipzig) → MS Student at ETH Zurich
+- Rishabh Sain (Visiting Student, May 2026 - Jul 2026; Undergrad at IIT Delhi)
+
+---
+
+## Why NTU?
+
+National Taiwan University (NTU) is Taiwan's most comprehensive and prestigious university, renowned for its academic excellence, outstanding students, and vibrant research community. NTU is ranked 54th worldwide in the 2027 QS World University Rankings and 51st–100th globally in Data Science and Artificial Intelligence in the 2026 QS World University Rankings by Subject.
+
+Taipei, home to NTU, is a vibrant, safe, and welcoming city known for its rich culture, delicious food, convenient transportation, and excellent quality of life. At the heart of Taiwan's world-leading technology ecosystem, Taipei hosts major operations of global technology leaders such as NVIDIA, Google, Microsoft, Amazon, AMD, MediaTek, and ASUS, offering exciting opportunities for industry connections and career development.
+
+---
+
+<img class="ntu-image" src="{{ '/files/HMguHhmbYAATG8B.jfif' | url }}" alt="NTU campus and university rankings" width="1667" height="1250">

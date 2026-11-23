@@ -1,0 +1,7 @@
+---
+layout: layouts/base.njk
+---
+{% include "components/profile.njk" %}
+<div class="home-content prose">
+  {{ content | datedLists | newsTabs | balancedSponsors | safe }}
+</div>
