@@ -305,10 +305,14 @@ p { margin: 0 0 var(--space-sm); }
 .page-intro { margin-bottom: 0; }
 .site-footer { font-size: var(--font-size-sm); }
 .footer-inner p { margin: 0; }
-.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-top: var(--space-md); }
+.home-footer { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: var(--space-sm); }
+.home-footer .footer-copyright { grid-column: 2; grid-row: 1; }
 .footer-visitor-count { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); text-align: left; }
 .footer-visitor-count img { display: block; }
-.footer-legacy-link { margin-inline-start: auto; }
+@media (max-width: 767px) {
+  .home-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-footer .footer-copyright { text-align: right; }
+}
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
 @media print {
   body { display: block; min-height: 0; }

@@ -2,7 +2,7 @@
 
 以英文為主、簡潔專業、手機閱讀良好，並方便長期自行手動更新的學術網站。採用 Eleventy、Markdown、Nunjucks 與原生 CSS；沒有 CMS、資料庫或前端框架；只有 Lab 相片集載入少量原生 JavaScript，其他互動沿用原生 HTML／CSS。
 
-正式網站由 `shaoyuanlo/shaoyuanlo.github.io` 的 `master` 建置，網址為 https://shaoyuanlo.github.io/ 。新站來源從 `shaoyuanlo/codex_test` 匯入，舊站的完整快照保存在 [legacy/](legacy/) ，可從新版首頁頁尾的 **Legacy Site** 開啟。
+正式網站由 `shaoyuanlo/shaoyuanlo.github.io` 的 `master` 建置，網址為 https://shaoyuanlo.github.io/ 。新站來源從 `shaoyuanlo/codex_test` 匯入，舊站的完整快照保存在 [legacy/](legacy/)。
 
 本文件是日常使用指南；Codex 的共用工作規則見 [AGENTS.md](AGENTS.md)。設計值以 [style.css](src/assets/style.css) 為準，以下表格是目前設定的說明，修改樣式時需同步核對。
 

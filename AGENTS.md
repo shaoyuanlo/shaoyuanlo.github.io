@@ -46,7 +46,7 @@
 
 ### 一般分頁與首頁
 
-- 導覽順序為 Home、Trai Lab、Publications、Activities、Teaching、Blog。Trai Lab 網址為 `/trailab/`。首頁頁尾左側顯示原有的 EasyCounter，右側的 Legacy Site 連到 `/legacy/`。Home 來源為 `home.md`、網址為 `/`。導覽列桌機顯示姓名與選單，不在姓名後額外加句點；手機隱藏導覽列姓名，選單維持單列，放不下時左右捲動，不改成多列；保留可見鍵盤焦點及各項目可達性。導覽列容器不設最低高度、上下內距為 0，由選單項目與原生捲動區自然決定高度。保留 `publications` 在檔名、section、導覽 key、CSS 與網址的一致性；舊 `/publication/` 僅保留於失效路徑的檢查與說明。
+- 導覽順序為 Home、Trai Lab、Publications、Activities、Teaching、Blog。Trai Lab 網址為 `/trailab/`。首頁頁尾的 EasyCounter 與版權文字同行。舊站 `/legacy/` 顯示切換前的靜態計數圖片。Home 來源為 `home.md`、網址為 `/`。導覽列桌機顯示姓名與選單，不在姓名後額外加句點；手機隱藏導覽列姓名，選單維持單列，放不下時左右捲動，不改成多列；保留可見鍵盤焦點及各項目可達性。導覽列容器不設最低高度、上下內距為 0，由選單項目與原生捲動區自然決定高度。保留 `publications` 在檔名、section、導覽 key、CSS 與網址的一致性；舊 `/publication/` 僅保留於失效路徑的檢查與說明。
 - 網頁文字使用英文半形括號 `()`，左括號前保留一個空格，例如 `NTUH (臺大醫院)`；不修改 Markdown 連結語法或網址內的括號。
 - Front matter 先放運作欄位（layout、section、permalink 等），再放 title、intro 與內容資料。正文從 H2 開始；不重新加入 eyebrow、description 或首頁 tagline 欄位及其相關顯示設定。
 - Home 與 Lab 的頁首內容統一在各自的 `profile:` 維護；首頁 `website:` 只保留導覽等全站設定，`site.profile` 讀取首頁 profile 作為全站姓名、頁尾及 metadata 的唯一來源，不重新建立 `site.json`；頁尾中文姓名不加括號。職稱使用 roles 清單，每組有 role 與一到多個 affiliations，各自成行；分頁頁首 intro 與首頁職稱／所屬單位共用 lg 字級。
