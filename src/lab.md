@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 section: lab
-permalink: /lab/index.html
+permalink: /trailab/index.html
 profile:
   name: Trai Lab
   nameChinese: 踹實驗室

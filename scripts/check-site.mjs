@@ -39,7 +39,7 @@ for (const file of files) {
     links++;
   }
 }
-for (const page of ['index.html', 'lab/index.html', 'photos/index.html', 'publications/index.html', 'activities/index.html', 'teaching/index.html', 'blog/index.html', 'legacy/index.html', '404.html']) {
+for (const page of ['index.html', 'trailab/index.html', 'photos/index.html', 'publications/index.html', 'activities/index.html', 'teaching/index.html', 'blog/index.html', 'legacy/index.html', '404.html']) {
   await stat(path.join(output, page));
 }
 console.log(`Validated ${files.length} pages and ${links} local links/assets at ${prefix}`);

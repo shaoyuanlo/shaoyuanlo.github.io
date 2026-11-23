@@ -2,7 +2,7 @@
 
 以英文為主、簡潔專業、手機閱讀良好，並方便長期自行手動更新的學術網站。採用 Eleventy、Markdown、Nunjucks 與原生 CSS；沒有 CMS、資料庫或前端框架；只有 Lab 相片集載入少量原生 JavaScript，其他互動沿用原生 HTML／CSS。
 
-正式網站由 `shaoyuanlo/shaoyuanlo.github.io` 的 `master` 建置，網址為 https://shaoyuanlo.github.io/ 。新站來源從 `shaoyuanlo/codex_test` 匯入，舊站的完整快照保存在 [legacy/](legacy/) ，可從新版導覽列的 **Legacy Site** 開啟。
+正式網站由 `shaoyuanlo/shaoyuanlo.github.io` 的 `master` 建置，網址為 https://shaoyuanlo.github.io/ 。新站來源從 `shaoyuanlo/codex_test` 匯入，舊站的完整快照保存在 [legacy/](legacy/) ，可從新版首頁頁尾的 **Legacy Site** 開啟。
 
 本文件是日常使用指南；Codex 的共用工作規則見 [AGENTS.md](AGENTS.md)。設計值以 [style.css](src/assets/style.css) 為準，以下表格是目前設定的說明，修改樣式時需同步核對。
 
@@ -19,7 +19,7 @@
 | 分頁 | 來源檔 | 網址 | 版型 |
 | --- | --- | --- | --- |
 | Home | [src/home.md](src/home.md) | `/` | `layouts/home.njk` |
-| Lab | [src/lab.md](src/lab.md) | `/lab/` | `layouts/page.njk` |
+| Lab | [src/lab.md](src/lab.md) | `/trailab/` | `layouts/page.njk` |
 | Publications | [src/publications.md](src/publications.md) | `/publications/` | `layouts/page.njk` |
 | Activities | [src/activities.md](src/activities.md) | `/activities/` | `layouts/page.njk` |
 | Teaching | [src/teaching.md](src/teaching.md) | `/teaching/` | `layouts/page.njk` |
@@ -81,7 +81,7 @@ Normal text, **bold text**, and *italic text*.
 站內連結使用 `url` filter，支援正式根網址、GitHub Pages 子路徑與代理預覽：
 
 ```njk
-[Lab]({{ '/lab/' | url }})
+[Lab]({{ '/trailab/' | url }})
 [CV]({{ '/files/SYLo_CV.pdf' | url }})
 ```
 
@@ -292,7 +292,7 @@ Markdown 分隔線 `.prose hr` 使用透明的 1px 線框，不顯示線條，�
 | 每個選單項目最低高度 | 48px | 48px |
 | 頭像顯示寬度 | 200px | 100px |
 
-`.header-inner`、`.site-main`、`.footer-inner` 共用容器；各分頁正文使用完整寬度。頁面採垂直 Flex，短頁面頁尾自然位於視窗底部。導覽列容器不設最低高度、上下內距為 0，由 48px 高的選單項目與原生捲動區自然決定高度。導覽列使用 sticky；桌機顯示姓名與選單，姓名不額外加句點；手機（≤767px）隱藏導覽列姓名，選單維持單列，空間不足時可左右滑動，項目不縮小或拆行；支援 Tab 移至選單項目及方向鍵水平捲動，焦點框收在項目內避免被裁切。選取項目使用粗體，滑鼠移入導覽項目時維持白字，並顯示粗體及底線。
+`.header-inner`、`.site-main`、`.footer-inner` 共用容器；各分頁正文使用完整寬度。頁面採垂直 Flex，短頁面頁尾自然位於視窗底部。導覽列容器不設最低高度、上下內距為 0，由 48px 高的選單項目與原生捲動區自然決定高度。導覽列使用 sticky；桌機顯示姓名與選單，姓名不額外加句點；手機（≤767px）隱藏導覽列姓名，選單維持單列，空間不足時可左右滑動，項目不縮小或拆行；支援 Tab 移至選單項目及方向鍵水平捲動，焦點框收在項目內避免被裁切。選取項目使用粗體，滑鼠移入導覽項目時維持白字並顯示底線，字重維持原本狀態。
 
 首頁桌機版為文字與照片兩欄；手機維持兩欄：左欄依序為姓名、職稱與所屬單位，右欄照片跨越這兩列；聯絡連結放在下方並占滿整列。照片頂端與姓名標題頂端對齊，維持 5:6 比例、`object-fit: cover`，不套用飽和度濾鏡。修改頭像檔名時需核對首頁圖片與共用 metadata 的路徑。
 
@@ -304,7 +304,7 @@ Lab 的 NTU 圖片使用 `.ntu-image`：桌機寬度為內容容器的 80%、手
 
 文字連結平時無底線，滑入時顯示底線。金色連結滑入時加深，導覽列連結維持白色；鍵盤焦點保留共用外框。外部 HTTP／HTTPS 連結及 `files/talks/` 下的投影片 PDF，由 `eleventy.config.js` 的 `newTabLinks` transform 在建置時統一加入 `target="_blank"` 與 `rel="noopener noreferrer"`，涵蓋 Markdown、手寫 HTML 與共用版型，不需逐筆加設定或新增瀏覽器腳本；原有 rel 值會保留。是否為外部連結以建置的網站 origin 判斷；所有投影片連結（包含站內 Slides）亦套用新分頁規則，其餘站內頁面／檔案、頁內錨點及 mailto 不套用。
 
-`Shared rectangular corners` 規則緊接間距設定，目前圓角 6px；連結底線距離 4px、粗細 1px。頁尾只有置中的 `© 2026 Shao-Yuan Lo 羅紹元`；姓名取自首頁資料，年份文字在 `base.njk` 手動維護。
+`Shared rectangular corners` 規則緊接間距設定，目前圓角 6px；連結底線距離 4px、粗細 1px。頁尾置中顯示 `© 2026 Shao-Yuan Lo 羅紹元`；姓名取自首頁資料，年份文字在 `base.njk` 手動維護。
 
 ## 預覽與發布
 
@@ -357,7 +357,7 @@ https://raw.githack.com/shaoyuanlo/shaoyuanlo.github.io/site-preview/revisions/<
 
 推送 `master` 後，[Deploy website to GitHub Pages](.github/workflows/pages.yml) 會建置、檢查並部署 `_site/`。儲存庫的 **Settings → Pages → Source** 使用 **GitHub Actions**，正式網站的基底路徑為 `/`。
 
-Eleventy 直接複製 `legacy/`，入口為 https://shaoyuanlo.github.io/legacy/ 。原站的 EasyCounter 已移至新版首頁個人資料區的聯絡連結下方，沿用原有計數器網址與累計紀錄。正式部署才會載入計數器。
+Eleventy 直接複製 `legacy/`，入口為 https://shaoyuanlo.github.io/legacy/ 。原站的 EasyCounter 已移至新版首頁頁尾左側，文字為「visits since Oct 2020」，沿用原有計數器網址與累計紀錄。正式部署才會載入計數器。
 
 ## 開發與驗證
 

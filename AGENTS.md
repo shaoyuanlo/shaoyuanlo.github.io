@@ -28,7 +28,7 @@
 - 內容、導覽與頁尾共用容器寬度及左右內距；各分頁正文使用完整容器寬度，不另加窄版限制。
 - 首頁 `.hero` 與 `.page-heading` 共用內外距；首頁姓名沿用共用 H1 間距，照片頂端維持與姓名標題頂端對齊，呈現原圖色彩。手機維持兩欄：左欄為姓名與職稱資訊，右側照片跨越姓名、職稱兩列，聯絡連結在下方占滿整列。中文姓名固定另起一行、左外距為 0，與英文姓名靠左對齊。
 - 論文標題沿用 H3 的字級、字重、行高與上外距，只獨立覆寫下外距。標題、職稱資訊、論文相關資訊與導覽用 compact 行高，正文用 body 行高。
-- `.button` 沿用共用文字式外觀；文字連結平時無底線、滑入時顯示底線，金色連結滑入時加深，導覽列維持白字並於選取或滑入時加粗，文字式按鈕用 accent，滑入及 News 選取時用加深的 accent，鍵盤焦點保留共用外框。不為個別連結複製設計。外部 HTTP／HTTPS 連結及 files/talks/ 下的投影片 PDF，在 Eleventy newTabLinks transform 統一以新分頁開啟並加入 noopener／noreferrer，保留既有 rel；外部連結以建置 origin 判斷，Slides 依投影片檔案路徑判斷；其餘站內、錨點及 mailto 不套用，不新增瀏覽器連結處理腳本。
+- `.button` 沿用共用文字式外觀；文字連結平時無底線、滑入時顯示底線，金色連結滑入時加深，導覽列維持白字，選取時加粗、滑入時顯示底線，文字式按鈕用 accent，滑入及 News 選取時用加深的 accent，鍵盤焦點保留共用外框。不為個別連結複製設計。外部 HTTP／HTTPS 連結及 files/talks/ 下的投影片 PDF，在 Eleventy newTabLinks transform 統一以新分頁開啟並加入 noopener／noreferrer，保留既有 rel；外部連結以建置 origin 判斷，Slides 依投影片檔案路徑判斷；其餘站內、錨點及 mailto 不套用，不新增瀏覽器連結處理腳本。
 - 標題、正文清單及頁尾不自帶內容分隔線；以 Markdown `---` 控制區塊留白，目前以透明線框隱藏線條，保留共用上下外距及既有留白結構。保留提示框、程式碼、表格等既有功能樣式。
 - 保留語意標題、每頁單一主標題、鍵盤操作、可見焦點、跳至內容、sticky 導覽、手機導覽水平捲動、內文換行、列印與本地字型等功能。
 
@@ -46,7 +46,7 @@
 
 ### 一般分頁與首頁
 
-- 導覽順序為 Home、Trai Lab、Publications、Activities、Teaching、Blog、Legacy Site；Legacy Site 連到原始檔案保留在 `legacy/` 的舊網站。Home 來源為 `home.md`、網址為 `/`。導覽列桌機顯示姓名與選單，不在姓名後額外加句點；手機隱藏導覽列姓名，選單維持單列，放不下時左右捲動，不改成多列；保留可見鍵盤焦點及各項目可達性。導覽列容器不設最低高度、上下內距為 0，由選單項目與原生捲動區自然決定高度。保留 `publications` 在檔名、section、導覽 key、CSS 與網址的一致性；舊 `/publication/` 僅保留於失效路徑的檢查與說明。
+- 導覽順序為 Home、Trai Lab、Publications、Activities、Teaching、Blog。Trai Lab 網址為 `/trailab/`。首頁頁尾左側顯示原有的 EasyCounter，右側的 Legacy Site 連到 `/legacy/`。Home 來源為 `home.md`、網址為 `/`。導覽列桌機顯示姓名與選單，不在姓名後額外加句點；手機隱藏導覽列姓名，選單維持單列，放不下時左右捲動，不改成多列；保留可見鍵盤焦點及各項目可達性。導覽列容器不設最低高度、上下內距為 0，由選單項目與原生捲動區自然決定高度。保留 `publications` 在檔名、section、導覽 key、CSS 與網址的一致性；舊 `/publication/` 僅保留於失效路徑的檢查與說明。
 - 網頁文字使用英文半形括號 `()`，左括號前保留一個空格，例如 `NTUH (臺大醫院)`；不修改 Markdown 連結語法或網址內的括號。
 - Front matter 先放運作欄位（layout、section、permalink 等），再放 title、intro 與內容資料。正文從 H2 開始；不重新加入 eyebrow、description 或首頁 tagline 欄位及其相關顯示設定。
 - Home 與 Lab 的頁首內容統一在各自的 `profile:` 維護；首頁 `website:` 只保留導覽等全站設定，`site.profile` 讀取首頁 profile 作為全站姓名、頁尾及 metadata 的唯一來源，不重新建立 `site.json`；頁尾中文姓名不加括號。職稱使用 roles 清單，每組有 role 與一到多個 affiliations，各自成行；分頁頁首 intro 與首頁職稱／所屬單位共用 lg 字級。

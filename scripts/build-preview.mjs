@@ -34,7 +34,7 @@ async function rewrite(dir) {
       await rewrite(filename);
     } else if (filename.endsWith('.html')) {
       const html = await readFile(filename, 'utf8');
-      // A raw-file proxy needs explicit filenames; it cannot resolve /lab/.
+      // A raw-file proxy needs explicit filenames; it cannot resolve /trailab/.
       const rewritten = html
         .replace(`<script src="${prefix}assets/gallery.js" defer></script>`,
           `<script data-preview-script="gallery">${galleryScript}</script>`)

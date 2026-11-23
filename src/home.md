@@ -35,7 +35,7 @@ website:
     url: /
     key: home
   - label: Trai Lab
-    url: /lab/
+    url: /trailab/
     key: lab
   - label: Publications
     url: /publications/
@@ -49,9 +49,6 @@ website:
   - label: Blog
     url: /blog/
     key: blog
-  - label: Legacy Site
-    url: /legacy/
-    key: legacy
 ---
 
 I am an Assistant Professor at [National Taiwan University](https://www.ntu.edu.tw/english/). My research spans **trustworthy AI, machine learning, and multimodal models**, with a recent focus on multimodal large language models and reasoning.
