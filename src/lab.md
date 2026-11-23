@@ -6,9 +6,9 @@ profile:
   name: Trai Lab
   nameChinese: 踹實驗室
   roles:
-    - role: Trustworthy AI Lab 信韌智慧實驗室
+    - role: Trustworthy AI Lab (信韌智慧實驗室)
       affiliations:
-        - National Taiwan University 國立臺灣大學
+        - National Taiwan University (國立臺灣大學)
   image: /files/trai_logo_11.png
   imageAlt: Trai Lab logo
   social:
@@ -29,7 +29,7 @@ photos:
 
 ### Principal Investigator
 
-- Shao-Yuan Lo 羅紹元
+- [Shao-Yuan Lo 羅紹元](https://shaoyuanlo.github.io)
 
 ### MS Students
 
