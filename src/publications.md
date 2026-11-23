@@ -11,7 +11,7 @@ title: Publications
 
 ### Industrial Anomaly Detection via Defect-Grounded Reasoning in Visual Latent Space
 
-Jaron Yeh, Yen-Wei Chang, Jiang Liu, **Shao-Yuan Lo**
+Jaron Yeh*, Yen-Wei Chang*, Jiang Liu, **Shao-Yuan Lo**
 
 *arXiv preprint arXiv:2609.29457*
 
@@ -19,7 +19,7 @@ Jaron Yeh, Yen-Wei Chang, Jiang Liu, **Shao-Yuan Lo**
 
 ### AEGIS: Audio Endogenous Guarding via Internal Signals Against Large Audio-Language Model Jailbreaks
 
-Yu-Ling Liao, Tzu-Chin Chiu, Zong-You Chen, Chi-Lei Tsai, **Shao-Yuan Lo**
+Yu-Ling Liao*, Tzu-Chin Chiu*, Zong-You Chen*, Chi-Lei Tsai*, **Shao-Yuan Lo**
 
 *arXiv preprint arXiv:2609.29287*
 
@@ -31,7 +31,7 @@ Yu-Ling Liao, Tzu-Chin Chiu, Zong-You Chen, Chi-Lei Tsai, **Shao-Yuan Lo**
 
 ### Spatiotemporal Dynamics-Aware Industrial Anomaly Detection and Reasoning
 
-S-Wei Chen, Siangyu Yang, Yi-Chen Jan, Chun-Yi Lee, **Shao-Yuan Lo**
+S-Wei Chen*, Siangyu Yang*, Yi-Chen Jan*, Chun-Yi Lee, **Shao-Yuan Lo**
 
 *IEEE/CVF Winter Conference on Applications of Computer Vision (**WACV**)*, 2027
 
@@ -51,7 +51,7 @@ Yi-Hsin Hung, Fangfu Liu, **Shao-Yuan Lo**, Chu-Song Chen
 
 ### When Demonstrations Fail: Diagnosing the Limits of In-Context Learning in Large Audio-Language Models with Progressive Cue Removal
 
-Yen-Ting Piao, Jay Chiehen Liao, Wei-Tang Chien, Toshiki Ogimoto, Shang-Tse Chen, Yun-Nung Chen, Chun-Yi Lee, **Shao-Yuan Lo**
+Yen-Ting Piao*, Jay Chiehen Liao*, Wei-Tang Chien*, Toshiki Ogimoto*, Shang-Tse Chen, Yun-Nung Chen, Chun-Yi Lee, **Shao-Yuan Lo**
 
 *IEEE Spoken Language Technology Workshop (**SLT**)*, 2026
 
