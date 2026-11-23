@@ -300,7 +300,7 @@ Markdown 分隔線 `.prose hr` 使用透明的 1px 線框，不顯示線條，�
 
 `.button` 是共用文字式連結外觀：`--accent`、600 字重，滑入時加深金色並顯示底線；沒有底色、邊框、內距或最低高度。Email、CV 與所有社群連結共用此樣式。News 控制也沿用它，另提供上下箭頭。聯絡連結可自動換行，水平間距 `--space-md`、換行間距 `--space-sm`。
 
-Lab 的 NTU 圖片使用 `.ntu-image`：桌機寬度為內容容器的 80%、手機為 90%，置中並保留原比例。一般段落使用 `--space-sm` 下外距，專用元件仍沿用其各自設定。
+Lab 的 NTU 圖片使用 `.ntu-image`：桌機寬度為內容容器的 70%、手機為 90%，置中並保留原比例。一般段落使用 `--space-sm` 下外距，專用元件仍沿用其各自設定。
 
 文字連結平時無底線，滑入時顯示底線。金色連結滑入時加深，導覽列連結維持白色；鍵盤焦點保留共用外框。外部 HTTP／HTTPS 連結及 `files/talks/` 下的投影片 PDF，由 `eleventy.config.js` 的 `newTabLinks` transform 在建置時統一加入 `target="_blank"` 與 `rel="noopener noreferrer"`，涵蓋 Markdown、手寫 HTML 與共用版型，不需逐筆加設定或新增瀏覽器腳本；原有 rel 值會保留。是否為外部連結以建置的網站 origin 判斷；所有投影片連結（包含站內 Slides）亦套用新分頁規則，其餘站內頁面／檔案、頁內錨點及 mailto 不套用。
 
