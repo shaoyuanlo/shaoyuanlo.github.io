@@ -51,9 +51,9 @@ website:
     key: blog
 ---
 
-I am an Assistant Professor at [National Taiwan University](https://www.ntu.edu.tw/english/). My research spans **trustworthy AI, machine learning, and multimodal models**, with a recent focus on multimodal large language models and reasoning.
+I am an Assistant Professor in the [Department of Computer Science and Information Engineering](https://www.csie.ntu.edu.tw//?locale=en) at [National Taiwan University](https://www.ntu.edu.tw/english/), where I have served since August 2025. I am also affiliated with the [AI Center of Research Excellence](https://aicore.ntu.edu.tw/en/) and the [ASUS-NTU Joint Research Center](https://anc.ntu.edu.tw/Default.html) at NTU. My research spans Trustworthy AI, Multimodal AI, and Social Intelligence, with a recent focus on multimodal foundation models, visual reasoning, model robustness, and machine theory of mind.
 
-Previously, I was a Research Scientist at [Honda Research Institute USA](https://usa.honda-ri.com/). I received my Ph.D. from [Johns Hopkins University](https://www.jhu.edu/) in 2023, and my M.S. and B.S. from National Chiao Tung University in 2019 and 2017. I also spent two wonderful summers with Amazon's Just Walk Out and Astro teams.
+Previously, I was a Research Scientist at [Honda Research Institute USA](https://usa.honda-ri.com/) from 2023 to 2025. I received my Ph.D. from [Johns Hopkins University](https://www.jhu.edu/) in 2023, and my M.S. and B.S. from [National Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index) in 2019 and 2017, respectively. I also spent wonderful summers with [Amazon](https://www.amazon.science/) as an Applied Scientist Intern.
 
 <!--
 <aside class="callout">
@@ -66,7 +66,11 @@ Previously, I was a Research Scientist at [Honda Research Institute USA](https:/
 
 ## Research
 
-abcde
+My research focuses on Trustworthy AI, Multimodal AI, and Social Intelligence, aiming to advance AI that can perceive and reason across modalities, remain reliable under challenging conditions, and understand human emotions, beliefs, and intentions. We explore three interconnected research directions:
+
+- **Trustworthy AI**: How can AI systems remain robust and reliable under adversarial and unforeseen conditions?
+- **Multimodal AI**: How can we develop efficient multimodal foundation models with advanced perception and reasoning capabilities?
+- **Social Intelligence**: How can AI models understand human emotions, beliefs, intentions, and behaviors to enable more natural and effective human-AI interactions?
 
 ---
 
