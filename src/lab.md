@@ -43,7 +43,7 @@ photos:
 
 ### Undergrad Students
 
-- Siangyu Yang 楊翔宇
+- [Siangyu Yang 楊翔宇](https://siangyuyang.me/)
 - Yen-Wei Chang 張彥崴
 - Jaron Yeh 葉哲綸
 - Meng-Heng Tsai 蔡孟衡
