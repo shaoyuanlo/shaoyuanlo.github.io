@@ -97,4 +97,4 @@ title: Academic Activities
 
 - I've been a fan of the [CTBC Brothers](https://www.brothers.tw/POR0101_) (formerly the Brother Elephants), a professional baseball team in Taiwan's CPBL, since 2005, when I was 10 years old.
 - I also enjoy watching the FIFA World Cup, NFL games, and table tennis.
-- Previous webpage.
+- [Legacy Website](https://shaoyuanlo.github.io/legacy/).
