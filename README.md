@@ -357,7 +357,7 @@ https://raw.githack.com/shaoyuanlo/shaoyuanlo.github.io/site-preview/revisions/<
 
 推送 `master` 後，[Deploy website to GitHub Pages](.github/workflows/pages.yml) 會建置、檢查並部署 `_site/`。儲存庫的 **Settings → Pages → Source** 使用 **GitHub Actions**，正式網站的基底路徑為 `/`。
 
-Eleventy 直接複製 `legacy/`，舊版 HTML、圖片和 PDF 保持原始檔案內容及相對目錄結構，入口為 https://shaoyuanlo.github.io/legacy/ 。
+Eleventy 直接複製 `legacy/`，入口為 https://shaoyuanlo.github.io/legacy/ 。原站的 EasyCounter 已移至新版首頁個人資料區的聯絡連結下方，沿用原有計數器網址與累計紀錄。正式部署才會載入計數器。
 
 ## 開發與驗證
 

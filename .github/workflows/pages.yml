@@ -29,6 +29,7 @@ jobs:
           # User websites live at /; project previews live at /repository/.
           PATH_PREFIX: ${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '/' || format('/{0}/', github.event.repository.name) }}
           SITE_URL: https://${{ github.repository_owner }}.github.io
+          SHOW_VISITOR_COUNTER: ${{ github.repository == 'shaoyuanlo/shaoyuanlo.github.io' && github.ref == 'refs/heads/master' && 'true' || 'false' }}
         run: npm run build
       - run: npm run check
       - uses: actions/upload-pages-artifact@v3

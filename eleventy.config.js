@@ -115,6 +115,7 @@ export default function (eleventyConfig) {
       return `<div class="sponsors">${rows.join("\n")}</div>`;
     }
   ));
+  eleventyConfig.addGlobalData("showVisitorCounter", process.env.SHOW_VISITOR_COUNTER === "true");
   eleventyConfig.addGlobalData("siteOrigin", process.env.SITE_URL || "https://shaoyuanlo.github.io");
   // Open external URLs and talk PDFs in new tabs across Markdown and shared templates.
   eleventyConfig.addTransform("newTabLinks", function (html) {
