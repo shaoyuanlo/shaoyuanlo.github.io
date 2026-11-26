@@ -36,7 +36,7 @@ photos:
 - Yi-Hsin Hung 洪亦歆
 - Po-Hsi Lin 林伯禧
 - Tzu- Huan Lin 林子歡
-- Shuan-Shaw Chen 陳璿修
+- [Shuan-Shaw Chen 陳璿修](https://stanfc.github.io/stanleychen-profile/)
 - Te-Kai Yen 嚴得愷
 - Guan-Yi Lin 林冠儀
 - Jui-Ming Yao 姚睿銘
